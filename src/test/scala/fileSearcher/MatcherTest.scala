@@ -1,5 +1,6 @@
 package fileSearcher
 
+import fileSearch.Matcher
 import org.scalatest.FlatSpec
 
 /**

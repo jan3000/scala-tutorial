@@ -9,5 +9,8 @@ import java.nio.file.Paths
 class Matcher(filter : String, rootLocation : String) {
 
   val rootToIOObject = FileConverter.convertToIOObject(Paths.get(rootToIOObject).toFile)
+  def execute(file: File) = {
+    print("hello")
+  }
 
 }
