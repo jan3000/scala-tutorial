@@ -5,6 +5,8 @@ package fileSearch
   */
 class FilterChecker(filter : String) {
 
+  def matches(content: String) = content contains filter
+
   def findMatchedFiles(listOfFiles: List[IOObject]): List[IOObject] = {
     listOfFiles
       .filter(_.name.contains(filter))
@@ -12,5 +14,8 @@ class FilterChecker(filter : String) {
   }
 
 
+}
 
+object FilterChecker{
+  def apply(filter: String): FilterChecker = new FilterChecker(filter)
 }
